@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Can Rustit · Encàrrecs</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#encarrecs">Encàrrecs</a></li>
+      </ul>
+    </nav>
+    
+    <div class="eyebrow">Rostisseria · Vallromanes</div>
+    <h1>Can Rustit</h1>
+    <p class="sub">A l'ast, com sempre. Fes la teva comanda i passa a recollir-la.</p>
+  </header>
+
+  <main>
+    <!-- PAS 1 -->
+    <section class="pas">
+      <div class="pas-num"><span>1</span>
+        <h2>Tria què vols</h2>
+      </div>
+      <div id="llista"></div>
+    </section>
+
+    <!-- PAS 2 -->
+    <section class="pas">
+      <div class="pas-num"><span>2</span>
+        <h2>Quan ho reculls</h2>
+      </div>
+      <div class="fila">
+        <div class="camp">
+          <label class="lbl" for="dia">Dia</label>
+          <input type="date" id="dia">
+        </div>
+        <div class="camp">
+          <label class="lbl" for="hora">Hora</label>
+          <input type="time" id="hora">
+        </div>
+      </div>
+    </section>
+
+    <!-- PAS 3 -->
+    <section class="pas">
+      <div class="pas-num"><span>3</span>
+        <h2>Les teves dades</h2>
+      </div>
+      <div class="camp">
+        <label class="lbl" for="nom">Nom</label>
+        <input type="text" id="nom" placeholder="El teu nom">
+      </div>
+      <div class="camp">
+        <label class="lbl" for="notes">Comentaris (opcional)</label>
+        <textarea id="notes" placeholder="Ex: poc fet, sense sal, al·lèrgies..."></textarea>
+      </div>
+    </section>
+
+    <!-- RESUM -->
+    <div class="resum" id="resum"></div>
+
+    <button class="enviar" id="enviar" disabled>
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.339l-.999 3.648 3.738-.969 5.157-1.317z" />
+      </svg>
+      Enviar comanda per WhatsApp
+    </button>
+    <p class="nota">S'obrirà el WhatsApp amb la comanda escrita. Només cal donar a enviar.</p>
+  </main>
+
+  <footer>
+    <strong>Can Rustit</strong> · Vallromanes<br>
+    Comandes per WhatsApp · recollida a la botiga
+  </footer>
+
+</body>
+
+</html>
