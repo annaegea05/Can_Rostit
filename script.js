@@ -7,12 +7,12 @@
   // 2) PRODUCTES  ->  { nom: "...", preu: 0.00 }
   //    Per afegir-ne un, copia una línia. Per treure'n un, esborra-la.
   const PRODUCTES = [
-    { nom: "Pollastre sencer a l'ast", preu: 12.50 },
-    { nom: "Mig pollastre",            preu: 7.00  },
-    { nom: "Costelles de porc",        preu: 9.50  },
-    { nom: "Conill a l'ast",           preu: 13.00 },
-    { nom: "Patates rostides",         preu: 3.50  },
-    { nom: "Pa amb tomàquet",          preu: 2.50  },
+    { nom: "Pollastre sencer a l'ast", preu: 12.50, img: "img/pollastre.jpg", },
+    { nom: "Mig pollastre",            preu: 7.00, img: "img/pollastre.jpg", },
+    { nom: "Costelles de porc",        preu: 9.50, img: "img/pollastre.jpg", },
+    { nom: "Conill a l'ast",           preu: 13.00, img: "img/pollastre.jpg", },
+    { nom: "Patates rostides",         preu: 3.50, img: "img/pollastre.jpg", },
+    { nom: "Pa amb tomàquet",          preu: 2.50, img: "img/pollastre.jpg", },
   ];
   
     const cistell = {};            // { index: quantitat }
@@ -27,6 +27,9 @@
       el.className = 'producte';
       el.id = 'prod-' + i;
       el.innerHTML = `
+      <div class="imatge">
+        <img class="foto-plat" src="${p.img}" alt="${p.nom}">
+      </div>
       <div class="info">
         <div class="nom">${p.nom}</div>
         <div class="preu">${p.preu.toFixed(2)} €</div>

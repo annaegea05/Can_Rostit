@@ -14,7 +14,16 @@
     --verd-wa: #25d366;
     /* verd WhatsApp, no tocar */
 }
-
+.imatge{
+    flex-shrink: 0;
+}
+.imatge img{
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -136,7 +145,12 @@ main {
     border-color: var(--brasa);
     box-shadow: 0 4px 16px -8px rgba(6, 64, 43, .5);
 }
-
+.foto-plat{
+    width: 50%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 .producte .info {
     flex: 1;
     min-width: 0;
