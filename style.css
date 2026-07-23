@@ -1,29 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600&display=swap');
 
 :root {
-    --teula: #06402B;
-    /* verd fosc principal */
+    --teula: #06402B;        /* verd fosc principal */
     --teula-fosc: #042b1d;
-    --brasa: #0a6644;
-    /* verd més clar (accents) */
-    --crema: #f6efe2;
-    /* fons càlid */
-    --fusta: #2a2a22;
-    /* text */
+    --brasa: #0a6644;         /* verd més clar (accents) */
+    --crema: #f6efe2;         /* fons càlid */
+    --fusta: #2a2a22;         /* text */
     --oliva: #5a6b4f;
-    --verd-wa: #25d366;
-    /* verd WhatsApp, no tocar */
+    --verd-wa: #25d366;       /* verd WhatsApp */
+    --boto-stepper: #be7539;  /* marró càlid per als botons + i - */
 }
-.imatge{
-    flex-shrink: 0;
-}
-.imatge img{
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -40,11 +27,10 @@ body {
 
 /* ── Capçalera ── */
 header {
-    background:
-        radial-gradient(120% 100% at 50% 0%, var(--brasa) 0%, var(--teula) 45%, var(--teula-fosc) 100%);
+    background: radial-gradient(120% 100% at 50% 0%, var(--brasa) 0%, var(--teula) 45%, var(--teula-fosc) 100%);
     color: var(--crema);
     text-align: center;
-    padding: 54px 22px 64px;
+    padding: 30px 22px 70px;
     position: relative;
     overflow: hidden;
 }
@@ -60,8 +46,25 @@ header::after {
     clip-path: polygon(0 100%, 0 40%, 4% 70%, 8% 35%, 12% 70%, 16% 35%, 20% 70%, 24% 35%, 28% 70%, 32% 35%, 36% 70%, 40% 35%, 44% 70%, 48% 35%, 52% 70%, 56% 35%, 60% 70%, 64% 35%, 68% 70%, 72% 35%, 76% 70%, 80% 35%, 84% 70%, 88% 35%, 92% 70%, 96% 35%, 100% 70%, 100% 100%);
 }
 
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--crema);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
 .eyebrow {
-    font-size: .72rem;
+    font-size: .8rem;
     letter-spacing: .42em;
     text-transform: uppercase;
     font-weight: 500;
@@ -72,7 +75,7 @@ header::after {
 header h1 {
     font-family: 'Fraunces', serif;
     font-weight: 900;
-    font-size: clamp(2.8rem, 9vw, 4.6rem);
+    font-size: clamp(3rem, 8vw, 5rem);
     line-height: .95;
     letter-spacing: -.02em;
 }
@@ -80,123 +83,142 @@ header h1 {
 header p.sub {
     margin-top: 16px;
     font-weight: 300;
-    font-size: 1.05rem;
-    max-width: 30ch;
+    font-size: 1.15rem;
+    max-width: 40ch;
     margin-inline: auto;
     opacity: .95;
 }
 
-/* ── Contingut ── */
+/* ── Contingut Principal (Més Gran) ── */
 main {
-    max-width: 620px;
+    max-width: 1100px; /* Ancho ampliado para monitores */
     margin: 0 auto;
-    padding: 34px 22px 60px;
+    padding: 40px 24px 70px;
 }
 
 .pas {
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 }
 
 .pas-num {
     font-family: 'Fraunces', serif;
     font-weight: 600;
     color: var(--teula);
-    font-size: .9rem;
+    font-size: 1rem;
     letter-spacing: .04em;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .pas-num span {
     display: inline-grid;
     place-items: center;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: var(--teula);
     color: var(--crema);
-    font-size: .95rem;
+    font-size: 1.05rem;
 }
 
 .pas-num h2 {
     font-family: 'Fraunces', serif;
     font-weight: 600;
     color: var(--fusta);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     letter-spacing: -.01em;
 }
 
-/* ── Llista de productes ── */
+/* ── Reixeta de Productes (2 Columnes més amples) ── */
+#llista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 .producte {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 18px;
     background: #fff;
     border: 1px solid #e7ddc9;
-    border-radius: 14px;
-    padding: 14px 16px;
-    margin-bottom: 10px;
+    border-radius: 16px;
+    padding: 16px 18px;
     transition: border-color .15s, box-shadow .15s;
 }
 
 .producte.actiu {
     border-color: var(--brasa);
-    box-shadow: 0 4px 16px -8px rgba(6, 64, 43, .5);
+    box-shadow: 0 6px 20px -6px rgba(6, 64, 43, .35);
 }
-.foto-plat{
-    width: 50%;
-    height: 80px;
+
+.imatge {
+    flex-shrink: 0;
+    width: 110px;  /* Imagen más grande */
+    height: 95px;
+}
+
+.foto-plat {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
+
 .producte .info {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .producte .nom {
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--fusta);
+    line-height: 1.25;
 }
 
 .producte .preu {
     color: var(--oliva);
-    font-size: .9rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
 
+/* Stepper Botons Més Grans */
 .stepper {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0;
 }
 
 .stepper button {
-    width: 34px;
+    width: 36px;
     height: 34px;
     border: none;
     cursor: pointer;
-    background: var(--crema);
-    color: var(--teula);
-    font-size: 1.3rem;
+    background: var(--boto-stepper);
+    color: #fff;
+    font-size: 1.2rem;
     font-weight: 600;
-    line-height: 1;
     display: grid;
     place-items: center;
-    border: 1px solid #e7ddc9;
+    transition: background-color .15s;
 }
 
 .stepper button:first-child {
-    border-radius: 9px 0 0 9px;
+    border-radius: 8px 0 0 8px;
 }
 
 .stepper button:last-child {
-    border-radius: 0 9px 9px 0;
+    border-radius: 0 8px 8px 0;
 }
 
-.stepper button:active {
-    background: var(--brasa);
-    color: #fff;
+.stepper button:hover {
+    background: #a35f2a;
 }
 
 .stepper .qty {
@@ -208,26 +230,27 @@ main {
     height: 34px;
     line-height: 34px;
     background: #fff;
+    font-size: 1rem;
 }
 
-/* ── Camps ── */
+/* ── Camps i Formularis ── */
 .camp {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 label.lbl {
     display: block;
-    font-weight: 500;
-    margin-bottom: 6px;
-    font-size: .95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1rem;
 }
 
 input,
 textarea {
     width: 100%;
     font-family: inherit;
-    font-size: 1rem;
-    padding: 13px 14px;
+    font-size: 1.05rem;
+    padding: 14px 16px;
     border: 1px solid #e7ddc9;
     border-radius: 12px;
     background: #fff;
@@ -243,7 +266,7 @@ textarea:focus {
 
 .fila {
     display: flex;
-    gap: 12px;
+    gap: 16px;
 }
 
 .fila .camp {
@@ -252,38 +275,38 @@ textarea:focus {
 
 textarea {
     resize: vertical;
-    min-height: 70px;
+    min-height: 90px;
 }
 
-/* ── Resum + botó ── */
+/* ── Resum i Botó ── */
 .resum {
     background: #fff;
     border: 1px dashed var(--brasa);
-    border-radius: 14px;
-    padding: 16px 18px;
-    margin-bottom: 18px;
-    font-size: .95rem;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
 }
 
 .resum .linia {
     display: flex;
     justify-content: space-between;
-    padding: 3px 0;
+    padding: 4px 0;
 }
 
 .resum .total {
     border-top: 1px solid #eee;
-    margin-top: 8px;
-    padding-top: 10px;
-    font-weight: 600;
-    font-size: 1.1rem;
+    margin-top: 10px;
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 1.25rem;
     color: var(--teula);
 }
 
 .resum .buit {
     color: var(--oliva);
     text-align: center;
-    padding: 6px 0;
+    padding: 8px 0;
 }
 
 .enviar {
@@ -294,13 +317,13 @@ textarea {
     color: #fff;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
-    font-size: 1.1rem;
-    padding: 17px;
+    font-size: 1.15rem;
+    padding: 18px;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     box-shadow: 0 8px 22px -10px rgba(37, 211, 100, .7);
     transition: transform .1s, opacity .15s;
 }
@@ -316,95 +339,82 @@ textarea {
 }
 
 .enviar svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
 }
 
 .nota {
     text-align: center;
-    font-size: .82rem;
+    font-size: .9rem;
     color: var(--oliva);
-    margin-top: 14px;
+    margin-top: 16px;
 }
 
-.menu {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 18px;
-    margin: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: var(--crema);
-    font-weight: 500;
-    font-size: .95rem;
-    padding: 6px 12px;
-    border-radius: 8px;
-}
-
-/* Footer */.footer-container {
-    max-width: 980px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    text-align: left;
-}
-
-/* Columna izquierda: nombre, subtítulo y dirección */
+/* ── Footer ── */
 footer {
     background: var(--teula-fosc);
     color: var(--crema);
-    padding: 40px 22px 48px;
-    text-align: center;
+    padding: 50px 22px 58px;
 }
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    text-align: left;
+}
+
 .footer-div {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 16px;
 }
 
 footer strong {
     font-family: 'Fraunces', serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--crema);
     display: block;
     margin-bottom: 4px;
 }
 
-footer-sub {
-    font-size: .95rem;
+.footer-sub {
+    font-size: 1rem;
     opacity: .8;
 }
 
-.adreca {
+.adreca, .correo, .insta {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--crema);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
 }
 
-.adreca:hover {
-    background: rgba(246, 239, 226, .08);
-    border-color: rgba(246, 239, 226, .5);
+/* Iconos monocromáticos (Lugar y Correo) */
+.adreca-icona {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(.92);
 }
 
-.adreca-icona {
-    width: 18px;
-    height: 18px;
-    filter: brightness(0) invert(.92);
+/* Icono de Instagram (Mantiene sus colores reales sin volverse blanco) */
+.insta-icona {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    object-fit: cover;
 }
 
 .mapa {
     flex: 1;
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .5);
     line-height: 0;
@@ -412,15 +422,18 @@ footer-sub {
 
 .mapa iframe {
     width: 100%;
-    height: 280px;
+    height: 260px;
     display: block;
 }
 
-/* En móvil: una columna, mapa abajo */
-@media (max-width: 720px) {
+/* ── Responsive Mobile ── */
+@media (max-width: 820px) {
+    #llista {
+        grid-template-columns: 1fr;
+    }
     .footer-container {
         flex-direction: column;
-        gap: 28px;
+        gap: 32px;
         text-align: center;
     }
     .footer-div {
