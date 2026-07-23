@@ -2,18 +2,39 @@
 
 // 1) NÚMERO DE WHATSAPP (amb prefix, sense + ni espais ni 00)
   //    Exemple Espanya: 34612345678
-  const WHATSAPP = "34633774970";
+  const WHATSAPP = "34679730150";
 
   // 2) PRODUCTES  ->  { nom: "...", preu: 0.00 }
   //    Per afegir-ne un, copia una línia. Per treure'n un, esborra-la.
-  const PRODUCTES = [
-    { nom: "Pollastre sencer a l'ast", preu: 12.50, img: "img/pollastre.jpg", },
-    { nom: "Mig pollastre",            preu: 7.00, img: "img/pollastre.jpg", },
-    { nom: "Costelles de porc",        preu: 9.50, img: "img/pollastre.jpg", },
-    { nom: "Conill a l'ast",           preu: 13.00, img: "img/pollastre.jpg", },
-    { nom: "Patates rostides",         preu: 3.50, img: "img/pollastre.jpg", },
-    { nom: "Pa amb tomàquet",          preu: 2.50, img: "img/pollastre.jpg", },
-  ];
+const PRODUCTES = [
+  { nom: "Pollastre sencer a l'ast", preu: 13.00, img: "img/pollastre.jpg" },
+  { nom: "Mig pollastre", preu: 8.00, img: "img/pollastre.jpg" },
+
+  { nom: "1 Patata al caliu", preu: 0.50, img: "img/pollastre.jpg" },
+  { nom: "Amanida de pasta", preu: 7.00, img: "img/pollastre.jpg" },
+  { nom: "Ensaladilla russa", preu: 8.00, img: "img/pollastre.jpg" },
+  { nom: "Macarrons a la catalana", preu: 9.00, img: "img/pollastre.jpg" },
+  { nom: "Galta de porc al vi negre", preu: 6.00, img: "img/pollastre.jpg" },
+  { nom: "Fricandó amb bolets", preu: 8.50, img: "img/pollastre.jpg" },
+
+  { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/pollastre.jpg" },
+  { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/pollastre.jpg" },
+  { nom: "1 Croqueta de gamba", preu: 2.00, img: "img/pollastre.jpg" },
+  { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/pollastre.jpg" },
+  { nom: "Pop a la gallega", preu: 15.00, img: "img/pollastre.jpg" },
+  { nom: "Arròs de secret i costella (la ració)", preu: 7.50, img: "img/pollastre.jpg" },
+
+  { nom: "Canelons de Can Rostit", preu: 7.50, img: "img/pollastre.jpg" },
+  { nom: "Esqueixada de bacallà", preu: 8.00, img: "img/pollastre.jpg" },
+  { nom: "Escalivada", preu: 7.50, img: "img/pollastre.jpg" },
+  { nom: "Truita de patates amb ceba (la ració)", preu: 2.50, img: "img/pollastre.jpg" },
+  { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/pollastre.jpg" },
+  { nom: "Pa fet del dia", preu: 1.50, img: "img/pollastre.jpg" },
+  { nom: "Allioli", preu: 1.50, img: "img/pollastre.jpg" },
+  { nom: "Cava Marfil d'Alella", preu: 12.00, img: "img/pollastre.jpg" },
+  { nom: "Vi negre Raventós d'Alella", preu: 12.00, img: "img/pollastre.jpg" },
+  { nom: "Vi blanc Raventós d'Alella", preu: 12.00, img: "img/pollastre.jpg" }
+];
   
     const cistell = {};            // { index: quantitat }
     const llista = document.getElementById('llista');
