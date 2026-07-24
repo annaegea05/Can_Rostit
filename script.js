@@ -1,3 +1,4 @@
+// ZONA EDITABLE — canvia aquí el número i els productes
 const WHATSAPP = "34679730150";
 
 const PRODUCTES = [
@@ -22,7 +23,7 @@ const PRODUCTES = [
 
   // Croquetes
   { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/pollastre.jpg", categoria: "Croquetes" },
-  { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/croqueta-jamon.jpg", categoria: "Croquetes" },
+  { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/pollastre.jpg", categoria: "Croquetes" },
   { nom: "1 Croqueta de gamba", preu: 2.00, img: "img/pollastre.jpg", categoria: "Croquetes" },
 
   // Arrossos i Pasta
@@ -42,13 +43,45 @@ const PRODUCTES = [
   { nom: "Ampolla d'aigua (1L)", preu: 1.50, img: "img/font_dor.jpeg", categoria: "Begudes" }
 ];
 
+const CISTELL_KEY = 'canrostit_cistell';
+const MENUS_KEY = 'canrostit_menus_cistell';
+
+// Menús fixos (han de coincidir amb els definits a menus.js)
+const MENUS = [
+  { nom: "Menú per a 4", preu: 40.00, categoria: "Menús" }
+];
+
 const cistell = {};
 const llista = document.getElementById('llista');
 const resum = document.getElementById('resum');
 const btn = document.getElementById('enviar');
 
-// Inicialitzem el cistell de la comanda
-PRODUCTES.forEach((_, i) => cistell[i] = 0);
+// Inicialitzem el cistell de la comanda, recuperant-lo si ja existia guardat
+let cistellGuardat = {};
+try {
+  cistellGuardat = JSON.parse(localStorage.getItem(CISTELL_KEY)) || {};
+} catch (e) {
+  cistellGuardat = {};
+}
+PRODUCTES.forEach((_, i) => cistell[i] = cistellGuardat[i] || 0);
+
+// Recuperem també la selecció de menús feta a menus.html
+function llegeixCistellMenus() {
+  try {
+    return JSON.parse(localStorage.getItem(MENUS_KEY)) || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+// Guarda el cistell actual al localStorage
+function guardaCistell() {
+  try {
+    localStorage.setItem(CISTELL_KEY, JSON.stringify(cistell));
+  } catch (e) {
+    // Si falla (mode privat, etc.) no passa res greu, simplement no persistirà
+  }
+}
 
 // Agrupem els productes segons la seva categoria
 const categories = {};
@@ -78,7 +111,7 @@ for (const [catNom, prods] of Object.entries(categories)) {
   prods.forEach((p) => {
     const i = p.originalIndex;
     const el = document.createElement('div');
-    el.className = 'producte';
+    el.className = 'producte' + (cistell[i] > 0 ? ' actiu' : '');
     el.id = 'prod-' + i;
     el.innerHTML = `
       <div class="imatge">
@@ -89,7 +122,7 @@ for (const [catNom, prods] of Object.entries(categories)) {
         <div class="preu">${p.preu.toFixed(2)} €</div>
         <div class="stepper">
           <button aria-label="Treure" onclick="canvia(${i},-1)">−</button>
-          <div class="qty" id="qty-${i}">0</div>
+          <div class="qty" id="qty-${i}">${cistell[i]}</div>
           <button aria-label="Afegir" onclick="canvia(${i},1)">+</button>
         </div>
       </div>`;
@@ -105,6 +138,7 @@ function canvia(i, d) {
   cistell[i] = Math.max(0, cistell[i] + d);
   document.getElementById('qty-' + i).textContent = cistell[i];
   document.getElementById('prod-' + i).classList.toggle('actiu', cistell[i] > 0);
+  guardaCistell();
   pintaResum();
 }
 
@@ -119,6 +153,18 @@ function pintaResum() {
       linies += `<div class="linia"><span>${cistell[i]}× ${p.nom}</span><span>${sub.toFixed(2)} €</span></div>`;
     }
   });
+
+  const cistellMenus = llegeixCistellMenus();
+  MENUS.forEach((m, i) => {
+    const qty = cistellMenus[i] || 0;
+    if (qty > 0) {
+      const sub = m.preu * qty;
+      total += sub;
+      n += qty;
+      linies += `<div class="linia"><span>${qty}× ${m.nom}</span><span>${sub.toFixed(2)} €</span></div>`;
+    }
+  });
+
   resum.innerHTML = n === 0
     ? `<div class="buit">Encara no has triat res 🍗</div>`
     : linies + `<div class="linia total"><span>Total</span><span>${total.toFixed(2)} €</span></div>`;
@@ -141,13 +187,35 @@ btn.addEventListener('click', () => {
       txt += `• ${cistell[i]}× ${p.nom} — ${sub.toFixed(2)} €\n`;
     }
   });
+
+  const cistellMenus = llegeixCistellMenus();
+  MENUS.forEach((m, i) => {
+    const qty = cistellMenus[i] || 0;
+    if (qty > 0) {
+      const sub = m.preu * qty;
+      total += sub;
+      txt += `• ${qty}× ${m.nom} — ${sub.toFixed(2)} €\n`;
+    }
+  });
+
   txt += `\n*Total: ${total.toFixed(2)} €*\n\n`;
   txt += `Client: ${nom || '(sense nom)'}\n`;
   txt += `Recollida: ${dia || '(dia?)'} a les ${hora || '(hora?)'}\n`;
   if (notes) txt += `Notes: ${notes}\n`;
 
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`, '_blank');
-});
 
+  // Un cop enviada la comanda, buidem els dos cistells perquè la propera comanda comenci de zero
+  PRODUCTES.forEach((_, i) => { cistell[i] = 0; });
+  localStorage.removeItem(CISTELL_KEY);
+  localStorage.removeItem(MENUS_KEY);
+  PRODUCTES.forEach((_, i) => {
+    const qtyEl = document.getElementById('qty-' + i);
+    const prodEl = document.getElementById('prod-' + i);
+    if (qtyEl) qtyEl.textContent = 0;
+    if (prodEl) prodEl.classList.remove('actiu');
+  });
+  pintaResum();
+});
 
 pintaResum();
