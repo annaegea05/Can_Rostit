@@ -434,6 +434,12 @@ footer strong {
     font-size: 1rem;
     opacity: .8;
 }
+.footer-sub-text{
+    font-size: 1rem;
+    opacity: .8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 .adreca, .correo, .insta {
     display: inline-flex;
