@@ -1,4 +1,3 @@
-// ZONA EDITABLE — canvia aquí el número i els productes
 const WHATSAPP = "34679730150";
 
 const PRODUCTES = [
@@ -51,6 +50,10 @@ const btn = document.getElementById('enviar');
 // Inicialitzem el cistell de la comanda
 PRODUCTES.forEach((_, i) => cistell[i] = 0);
 
+// Inicialitzem el cistell de la comanda per als menús
+MENUS.forEach((_, i) => cistell['m' + i] = 0);
+
+
 // Agrupem els productes segons la seva categoria
 const categories = {};
 PRODUCTES.forEach((p, index) => {
@@ -58,6 +61,14 @@ PRODUCTES.forEach((p, index) => {
     categories[p.categoria] = [];
   }
   categories[p.categoria].push({ ...p, originalIndex: index });
+});
+
+const categoriesMenus = {};
+MENUS.forEach((p, index) => {
+  if (!categoriesMenus[p.categoria]) {
+    categoriesMenus[p.categoria] = [];
+  }
+  categoriesMenus[p.categoria].push({ ...p, originalIndex: 'm' + index });
 });
 
 // Renderitzem les categories i els productes al DOM
@@ -149,5 +160,6 @@ btn.addEventListener('click', () => {
 
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`, '_blank');
 });
+
 
 pintaResum();
