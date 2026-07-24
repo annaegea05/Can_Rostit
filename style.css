@@ -55,6 +55,7 @@ header::after {
 .menu {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     gap: 18px;
     margin-bottom: 20px;
@@ -478,6 +479,14 @@ footer strong {
 }
 /* ── Responsive Mobile ── */
 @media (max-width: 820px) {
+    .menu {
+        justify-content: center;
+        gap: 10px 14px;
+    }
+    .menu a {
+        padding: 6px 8px;
+        font-size: .9rem;
+    }
     .llista-productes {
         grid-template-columns: 1fr;
     }
