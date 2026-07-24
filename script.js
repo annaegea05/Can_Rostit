@@ -12,14 +12,14 @@ const PRODUCTES = [
   { nom: "Ensaladilla russa", preu: 8.00, img: "img/ensaladilla.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Esqueixada de bacallà", preu: 8.00, img: "img/Esqueixada de bacallà.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Truita de patates amb ceba (la ració)", preu: 2.50, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Truita de patates amb ceba (la ració)", preu: 2.50, img: "img/Truita de patates amb ceba.jpeg", categoria: "Entrants i Acompanyaments" },
 
   // Plats Cuinats
-  { nom: "Galta de porc al vi negre", preu: 6.00, img: "img/pollastre.jpg", categoria: "Plats Cuinats" },
-  { nom: "Fricandó amb bolets", preu: 8.50, img: "img/pollastre.jpg", categoria: "Plats Cuinats" },
-  { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/pollastre.jpg", categoria: "Plats Cuinats" },
-  { nom: "Pop a la gallega", preu: 15.00, img: "img/pollastre.jpg", categoria: "Plats Cuinats" },
+  { nom: "Galta de porc al vi negre", preu: 6.00, img: "img/Galta de porc al vi negre.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Fricandó amb bolets", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/Bacallà amb tomàquet.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Pop a la gallega", preu: 15.00, img: "img/Pop a la gallega.jpeg", categoria: "Plats Cuinats" },
 
   // Croquetes
   { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/pollastre.jpg", categoria: "Croquetes" },
