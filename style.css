@@ -149,7 +149,7 @@ main {
 }
 
 .categoria-titol {
-    font-family: var(--font-span);
+    font-family: var(--font-titol);
     font-size: 1.4rem;
     color: var(--teula);
     border-bottom: 2px solid #e7ddc9;
@@ -210,6 +210,14 @@ main {
     font-size: 1.05rem;
     color: var(--fusta);
     line-height: 1.25;
+}
+
+.producte .descripcio {
+    font-size: .85rem;
+    color: var(--fusta);
+    opacity: .75;
+    line-height: 1.4;
+    margin: 4px 0 6px;
 }
 
 .producte .preu {

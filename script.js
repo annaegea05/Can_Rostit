@@ -2,10 +2,10 @@
 const WHATSAPP = "34679730150";
 
 const PRODUCTES = [
+
   // A l'ast
   { nom: "Pollastre sencer a l'ast", preu: 13.00, img: "img/pollastre.jpg", categoria: "A l'ast" },
   { nom: "Mig pollastre", preu: 8.00, img: "img/Mig_pollastre.jpeg", categoria: "A l'ast" },
-  
   // Entrants i Acompanyaments
   { nom: "1 Patata al caliu", preu: 0.50, img: "img/caliu.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Amanida de pasta", preu: 7.00, img: "img/Pasta_salad.jpeg", categoria: "Entrants i Acompanyaments" },
@@ -14,27 +14,22 @@ const PRODUCTES = [
   { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Truita de patates amb ceba (la ració)", preu: 2.50, img: "img/Truita de patates amb ceba.jpeg", categoria: "Entrants i Acompanyaments" },
-
   // Plats Cuinats
-  { nom: "Galta de porc al vi negre", preu: 6.00, img: "img/Galta de porc al vi negre.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Galta de porc al vi negre", preu: 6.00, img: "img/Galta de porc al vi negre.jpeg", categoria: "Plats Cuinats" }, // falta
   { nom: "Fricandó amb bolets", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/Bacallà amb tomàquet.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Pop a la gallega", preu: 15.00, img: "img/Pop a la gallega.jpeg", categoria: "Plats Cuinats" },
-
-  // Croquetes
-  { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/pollastre.jpg", categoria: "Croquetes" },
-  { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/pollastre.jpg", categoria: "Croquetes" },
-  { nom: "1 Croqueta de gamba", preu: 2.00, img: "img/pollastre.jpg", categoria: "Croquetes" },
-
+  { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/Bacallà amb tomàquet.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Pop a la gallega", preu: 15.00, img: "img/", categoria: "Plats Cuinats" },// falta
+  // Croquetes 
+  { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes" },
+  { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/Croqueta de pernil ibèric.jpeg", categoria: "Croquetes" },
+  { nom: "1 Croqueta de gamba", preu: 2.00, img: "img/", categoria: "Croquetes" }, // falta
   // Arrossos i Pasta
-  { nom: "Macarrons a la catalana", preu: 9.00, img: "img/pollastre.jpg", categoria: "Arrossos i Pasta" },
-  { nom: "Arròs de secret i costella (la ració)", preu: 7.50, img: "img/pollastre.jpg", categoria: "Arrossos i Pasta" },
-  { nom: "Canelons de Can Rostit", preu: 7.50, img: "img/pollastre.jpg", categoria: "Arrossos i Pasta" },
-
+  { nom: "Macarrons a la catalana", preu: 9.00, img: "img/Macarrons a la catalana.jpeg", categoria: "Arrossos i Pasta" },
+  { nom: "Arròs de secret i costella (la ració)", preu: 7.50, img: "img/", categoria: "Arrossos i Pasta" }, // falta
+  { nom: "Canelons de Can Rostit", preu: 7.50, img: "img/", categoria: "Arrossos i Pasta" }, // falta
   // Salses i Complements
   { nom: "Pa fet del dia", preu: 1.50, img: "img/pa.jpg", categoria: "Salses i Complements" },
   { nom: "Allioli", preu: 1.50, img: "img/alioli.jpeg", categoria: "Salses i Complements" },
-
   // Begudes
   { nom: "Cava Marfil d'Alella", preu: 12.00, img: "img/cava.jpeg", categoria: "Begudes" },
   { nom: "Vi negre Raventós d'Alella", preu: 12.00, img: "img/vi_negre.jpeg", categoria: "Begudes" },
