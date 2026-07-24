@@ -4,14 +4,14 @@ const WHATSAPP = "34679730150";
 const PRODUCTES = [
   // A l'ast
   { nom: "Pollastre sencer a l'ast", preu: 13.00, img: "img/pollastre.jpg", categoria: "A l'ast" },
-  { nom: "Mig pollastre", preu: 8.00, img: "img/pollastre.jpg", categoria: "A l'ast" },
+  { nom: "Mig pollastre", preu: 8.00, img: "img/Mig_pollastre.jpeg", categoria: "A l'ast" },
   
   // Entrants i Acompanyaments
-  { nom: "1 Patata al caliu", preu: 0.50, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Amanida de pasta", preu: 7.00, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Ensaladilla russa", preu: 8.00, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Esqueixada de bacallà", preu: 8.00, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Escalivada", preu: 7.50, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
+  { nom: "1 Patata al caliu", preu: 0.50, img: "img/caliu.jpeg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Amanida de pasta", preu: 7.00, img: "img/Pasta_salad.jpeg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Ensaladilla russa", preu: 8.00, img: "img/ensaladilla.jpeg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Esqueixada de bacallà", preu: 8.00, img: "img/Esqueixada de bacallà.jpg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Truita de patates amb ceba (la ració)", preu: 2.50, img: "img/pollastre.jpg", categoria: "Entrants i Acompanyaments" },
 
