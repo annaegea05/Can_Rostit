@@ -389,6 +389,12 @@ textarea {
     margin-top: 16px;
 }
 
+/* ── Encarrec ── */
+.frase-encarrec{
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
 /* ── Footer ── */
 footer {
     background: var(--teula-fosc);
@@ -477,6 +483,7 @@ footer strong {
     height: 260px;
     display: block;
 }
+
 /* ── Responsive Mobile ── */
 @media (max-width: 820px) {
     .menu {
