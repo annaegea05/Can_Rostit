@@ -528,6 +528,10 @@ footer strong {
     z-index: 1000;
 }
 
+.modal-overlay[hidden] {
+    display: none;
+}
+
 .modal-box {
     background: var(--crema);
     border-radius: 12px;
