@@ -1,72 +1,596 @@
-<!DOCTYPE html>
-<html lang="ca">
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can Rostit - Encàrrecs</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <script src="encarrecs.js" defer></script>
-</head>
+:root {
+    --teula: #06402B;        /* verd fosc principal */
+    --teula-fosc: #042b1d;
+    --brasa: #0a6644;         /* verd més clar (accents) */
+    --crema: #f6efe2;         /* fons càlid */
+    --fusta: #2a2a22;         /* text */
+    --oliva: #5a6b4f;
+    --verd-wa: #25d366;       /* verd WhatsApp */
+    --boto-stepper: #be7539;  /* marró càlid per als botons + i - */
+    
+    /* Variables de tipografia */
+    --font-principal: 'Plus Jakarta Sans', sans-serif;
+    --font-secundaria: 'Poppins', sans-serif;
+    --font-span: 'Fraunces', serif;
+    --font-titol: 'Poppins', serif;
+}
 
-<body>
-    <!-- Capçalera -->
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Plats</a></li>
-                <li><a href="encarrecs.html">Encàrrecs Especials</a></li>
-                <li><a href="menus.html">Menú</a></li>
-                <li><a href="index.html#contacte">Contacte</a></li>
-            </ul>
-        </nav>
-        <h1>can rostit</h1>
-        <h3 class="sub_titol">Cuina casolana</h3>
-        <p class="sub">Fes el teu encàrrec online i recull-ho a la nostra botiga sense cues.</p>
-    </header>
-    <main id="encarrecs">
-        <section class="pas">
-            <div class="pas-num">
-                <span>1</span>
-                <h2>Realitza el teu encàrrec</h2>
-            </div>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-            <p class="frase-encarrec">Per fer algun encàrrec especial o demanar un càtering per a alguna celebració,
-                deixa'ns-ho escrit aquí a sota o truca al 679 730 150</p>
+body {
+    font-family: var(--font-principal);
+    background: var(--crema);
+    color: var(--fusta);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
 
-            <div class="fila">
-                <div class="camp">
-                    <label class="lbl" for="dia">Per quan?</label>
-                    <input type="date" id="dia">
-                </div>
+/* ── Capçalera ── */
+header {
+    background: radial-gradient(120% 100% at 50% 0%, var(--brasa) 0%, var(--teula) 45%, var(--teula-fosc) 100%);
+    color: var(--crema);
+    text-align: center;
+    padding: 30px 22px 70px;
+    position: relative;
+    overflow: hidden;
+}
 
-                <div class="camp">
-                    <label class="lbl" for="hora">Seleccionar hora</label>
-                    <input type="time" id="hora">
-                </div>
-            </div>
-            <div class="camp">
-                <label class="lbl" for="nom">El teu nom</label>
-                <input type="text" id="nom" placeholder="Ex: Maria Garcia">
-            </div>
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 34px;
+    background: var(--crema);
+    clip-path: polygon(0 100%, 0 40%, 4% 70%, 8% 35%, 12% 70%, 16% 35%, 20% 70%, 24% 35%, 28% 70%, 32% 35%, 36% 70%, 40% 35%, 44% 70%, 48% 35%, 52% 70%, 56% 35%, 60% 70%, 64% 35%, 68% 70%, 72% 35%, 76% 70%, 80% 35%, 84% 70%, 88% 35%, 92% 70%, 96% 35%, 100% 70%, 100% 100%);
+}
 
-            <div class="camp">
-                <label class="lbl" for="notes">Escriu el que vols encarregar</label>
-                <textarea id="notes" placeholder="Ex: Paella de marisc, truita de patates..."></textarea>
-            </div>
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-bottom: 20px;
+}
 
-            <button id="enviar" class="enviar" disabled>
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
-                </svg>
-                Enviar encàrrec per WhatsApp
-            </button>
-            <p class="nota">En clicar s'obrirà el teu WhatsApp amb el detall de l'encàrrec a punt per enviar</p>
-        </section>
-    </main>
+.menu a {
+    text-decoration: none;
+    color: var(--crema);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
 
-</body>
+.sub_titol {
+    font-size: 1rem;
+    letter-spacing: .150em;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: .85;
+    margin-top: 0.50rem; 
+    margin-bottom: 2rem;
+}
 
-</html>
+header h1 {
+    font-family: var(--font-titol);
+    font-weight: 200; /* ExtraLight */
+    font-size: 5rem;
+    line-height: .95;
+    letter-spacing: -.02em;
+    margin-top: 1rem;
+}
+
+
+header p.sub {
+    margin-top: 16px;
+    font-weight: 300;
+    font-size: 1.15rem;
+    max-width: 40ch;
+    margin-inline: auto;
+    opacity: .95;
+}
+
+/* ── Contingut Principal ── */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 70px;
+}
+
+.pas {
+    margin-bottom: 48px;
+}
+
+.pas-num {
+    font-family: var(--font-titol);
+    font-weight: 600;
+    color: var(--teula);
+    font-size: 1rem;
+    letter-spacing: .04em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pas-num span {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--teula);
+    color: var(--crema);
+    font-size: 1.05rem;
+    font-family: var(--font-principal);
+}
+
+.pas-num h2 {
+    font-family: var(--font-span);
+    font-weight: 600;
+    color: var(--fusta);
+    font-size: 1.6rem;
+    letter-spacing: -.01em;
+}
+
+/* ── Categories de Productes ── */
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px; /* Espai entre diferents categories */
+}
+
+.categoria-titol {
+    font-family: var(--font-titol);
+    font-size: 1.4rem;
+    color: var(--teula);
+    border-bottom: 2px solid #e7ddc9;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Reixeta de 2 columnes per als productes de cada categoria */
+.llista-productes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* ── Targeta de Producte ── */
+.producte {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+    border: 1px solid #e7ddc9;
+    border-radius: 16px;
+    padding: 16px 18px;
+    transition: border-color .15s, box-shadow .15s;
+}
+
+.producte.actiu {
+    border-color: var(--brasa);
+    box-shadow: 0 6px 20px -6px rgba(6, 64, 43, .35);
+}
+
+.imatge {
+    flex-shrink: 0;
+    width: 110px;
+    height: 95px;
+}
+
+.foto-plat {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.producte .info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.producte .nom {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--fusta);
+    line-height: 1.25;
+}
+
+.producte .descripcio {
+    font-size: .85rem;
+    color: var(--fusta);
+    opacity: .75;
+    line-height: 1.4;
+    margin: 4px 0 6px;
+}
+
+.producte .preu {
+    color: var(--oliva);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Stepper Botons (+ / -) */
+.stepper {
+    display: inline-flex;
+    align-items: center;
+}
+
+.stepper button {
+    width: 36px;
+    height: 34px;
+    border: none;
+    cursor: pointer;
+    background: var(--boto-stepper);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    transition: background-color .15s;
+}
+
+.stepper button:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.stepper button:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.stepper button:hover {
+    background: #a35f2a;
+}
+
+.stepper .qty {
+    width: 38px;
+    text-align: center;
+    font-weight: 600;
+    border-top: 1px solid #e7ddc9;
+    border-bottom: 1px solid #e7ddc9;
+    height: 34px;
+    line-height: 34px;
+    background: #fff;
+    font-size: 1rem;
+}
+
+/* ── Camps i Formularis ── */
+.camp {
+    margin-bottom: 20px;
+}
+
+label.lbl {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.05rem;
+    padding: 14px 16px;
+    border: 1px solid #e7ddc9;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--fusta);
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--brasa);
+    outline-offset: 1px;
+    border-color: transparent;
+}
+
+.fila {
+    display: flex;
+    gap: 16px;
+}
+
+.fila .camp {
+    flex: 1;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* ── Resum i Botó ── */
+.resum {
+    background: #fff;
+    border: 1px dashed var(--brasa);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+}
+
+.resum .linia {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.resum .total {
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--teula);
+}
+
+.resum .buit {
+    color: var(--oliva);
+    text-align: center;
+    padding: 8px 0;
+}
+
+.enviar {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background: var(--verd-wa);
+    color: #fff;
+    font-family: var(--font-principal);
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 18px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 8px 22px -10px rgba(37, 211, 100, .7);
+    transition: transform .1s, opacity .15s;
+}
+
+.enviar:active {
+    transform: scale(.985);
+}
+
+.enviar:disabled {
+    background: #c7c7bf;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.enviar svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nota {
+    text-align: center;
+    font-size: .9rem;
+    color: var(--oliva);
+    margin-top: 16px;
+}
+
+/* ── Encarrec ── */
+.frase-encarrec{
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+/* ── Footer ── */
+footer {
+    background: var(--teula-fosc);
+    color: var(--crema);
+    padding: 50px 22px 58px;
+}
+.footer_h1{
+    font-family: var(--font-titol);
+    font-size: 2.2rem;
+    color: var(--crema);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 200; /* ExtraLight */
+    line-height: .95;
+    letter-spacing: -.02em;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    text-align: left;
+}
+
+.footer-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+footer strong {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    color: var(--crema);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.footer-sub {
+    font-size: 1rem;
+    opacity: .8;
+}
+.footer-sub-text{
+    font-size: 1rem;
+    opacity: .8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.adreca, .correo, .insta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--crema);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.adreca-icona {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(.92);
+}
+.adreca-icona-svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--crema); /* Utilitza el mateix color de text que el footer */
+    flex-shrink: 0;
+}
+
+.mapa {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .5);
+    line-height: 0;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 260px;
+    display: block;
+}
+
+/* ── Responsive Mobile ── */
+@media (max-width: 820px) {
+    .menu {
+        justify-content: center;
+        gap: 10px 14px;
+    }
+    .menu a {
+        padding: 6px 8px;
+        font-size: .9rem;
+    }
+    .llista-productes {
+        grid-template-columns: 1fr;
+    }
+    .pas-num {
+        justify-content: center;
+    }
+    .adreca, .correo, .insta {
+        justify-content: center;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+    .footer-div {
+        align-items: center;
+    }
+    .camp {
+        margin-bottom: 16px;
+    }
+    .fila {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+/* ── Modal de subscripció a novetats ── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-box {
+    background: var(--crema);
+    border-radius: 12px;
+    padding: 32px 24px;
+    max-width: 380px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.modal-box h2 {
+    color: var(--teula-fosc);
+    margin-bottom: 12px;
+}
+
+.modal-tancar {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--teula-fosc);
+}
+
+#input-telefon-subscripcio {
+    width: 100%;
+    padding: 10px;
+    margin: 16px 0;
+    border: 1px solid var(--fusta);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.modal-botons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-primari {
+    background: var(--verd-wa);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secundari {
+    background: none;
+    border: 1px solid var(--fusta);
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
