@@ -513,6 +513,7 @@ footer strong {
     }
     .camp {
         margin-bottom: 16px;
+        gap: 8px;
     }
 
 }
