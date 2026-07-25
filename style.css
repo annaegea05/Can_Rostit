@@ -511,4 +511,8 @@ footer strong {
     .footer-div {
         align-items: center;
     }
+    .camp {
+        margin-bottom: 16px;
+    }
+
 }

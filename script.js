@@ -1,5 +1,6 @@
 // ZONA EDITABLE — canvia aquí el número i els productes
 const WHATSAPP = "34679730150";
+const NUM_TELEFON_RESTAURANT = "34679730150";
 
 const PRODUCTES = [
 
@@ -214,3 +215,37 @@ btn.addEventListener('click', () => {
 });
 
 pintaResum();
+
+
+function inicialitzarModalSubscripcio() {
+  const jaVist = localStorage.getItem("subscripcio-mostrada");
+  if (jaVist) return;
+
+  const modal = document.getElementById("modal-subscripcio");
+  modal.hidden = false;
+
+  document.getElementById("btn-subscriure").addEventListener("click", () => {
+    const telefon = document.getElementById("input-telefon-subscripcio").value.trim();
+    if (!telefon) {
+      alert("Si us plau, introdueix un número de telèfon.");
+      return;
+    }
+    const missatge = `Hola! Vull apuntar-me a les novetats de Cal Rustit. El meu número és ${telefon}`;
+    const url = `https://wa.me/${NUM_TELEFON_RESTAURANT}?text=${encodeURIComponent(missatge)}`;
+    window.open(url, "_blank");
+    localStorage.setItem("subscripcio-mostrada", "true");
+    modal.hidden = true;
+  });
+
+  document.getElementById("btn-ara-no").addEventListener("click", () => {
+    localStorage.setItem("subscripcio-mostrada", "true");
+    modal.hidden = true;
+  });
+
+  document.getElementById("tancar-modal").addEventListener("click", () => {
+    localStorage.setItem("subscripcio-mostrada", "true");
+    modal.hidden = true;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", inicialitzarModalSubscripcio);
