@@ -513,7 +513,10 @@ footer strong {
     }
     .camp {
         margin-bottom: 16px;
-        gap: 8px;
+    }
+    .fila {
+        flex-direction: column;
+        gap: 20px;
     }
 
 }
