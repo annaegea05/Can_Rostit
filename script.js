@@ -17,8 +17,8 @@ const PRODUCTES = [
   // Plats Cuinats
   { nom: "Galta de porc al vi negre", preu: 7.00, img: "img/galta.jpeg", categoria: "Plats Cuinats" }, // falta
   { nom: "Fricandó amb bolets", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/Bacallà amb tomàquet.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Pop a la gallega", preu: 15.00, img: "img/pop.jpg", categoria: "Plats Cuinats" },// falta
+  { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/Bacalla_amb_tomaquet.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Pop a la gallega", preu: 15.00, img: "img/pop.jpg", categoria: "Plats Cuinats" },
   // Croquetes 
   { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes" },
   { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/Croqueta de pernil iberic.jpeg", categoria: "Croquetes" },
