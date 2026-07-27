@@ -21,7 +21,7 @@ const PRODUCTES = [
   { nom: "Pop a la gallega", preu: 15.00, img: "img/pop.jpg", categoria: "Plats Cuinats" },// falta
   // Croquetes 
   { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes" },
-  { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/Croqueta de pernil ibèric.jpeg", categoria: "Croquetes" },
+  { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/Croqueta de pernil iberic.jpeg", categoria: "Croquetes" },
   { nom: "1 Croqueta de gamba", preu: 2.00, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes" }, // falta
   // Arrossos i Pasta
   { nom: "Macarrons a la catalana", preu: 7.00, img: "img/Macarrons a la catalana.jpeg", categoria: "Arrossos i Pasta" },
