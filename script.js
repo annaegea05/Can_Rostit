@@ -3,7 +3,6 @@ const WHATSAPP = "34679730150";
 const NUM_TELEFON_RESTAURANT = "34679730150";
 
 const PRODUCTES = [
-
   // A l'ast
   { nom: "Pollastre sencer a l'ast", preu: 13.00, img: "img/pollastre.jpg", categoria: "A l'ast" },
   { nom: "Mig pollastre", preu: 8.00, img: "img/Mig_pollastre.jpeg", categoria: "A l'ast" },
