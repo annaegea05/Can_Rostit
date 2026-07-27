@@ -10,7 +10,7 @@ const PRODUCTES = [
   { nom: "1 Patata al caliu", preu: 1.00, img: "img/caliu.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Amanida de pasta", preu: 7.00, img: "img/Pasta_salad.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Ensaladilla russa", preu: 7.50, img: "img/ensaladilla.jpeg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Esqueixada de bacallà", preu: 8.00, img: "img/Esqueixada de bacallà.jpg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Esqueixada de bacallà", preu: 8.00, img: "img/Esqueixada de bacalla.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Truita de patates amb ceba (la ració)", preu: 3.50, img: "img/Truita de patates amb ceba.jpeg", categoria: "Entrants i Acompanyaments" },
