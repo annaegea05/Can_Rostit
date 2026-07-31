@@ -13,9 +13,9 @@ const PRODUCTES = [
   { nom: "Esqueixada de bacallà", preu: 8.00, img: "img/Esqueixada de bacalla.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Truita de patates amb ceba (la ració)", preu: 3.50, img: "img/Truita de patates amb ceba.jpeg", categoria: "Entrants i Acompanyaments" },
+  //{ nom: "Truita de patates amb ceba (la ració)", preu: 3.50, img: "img/Truita de patates amb ceba.jpeg", categoria: "Entrants i Acompanyaments" },
   // Plats Cuinats
-  { nom: "Galta de porc al vi negre", preu: 7.00, img: "img/galta.jpeg", categoria: "Plats Cuinats" }, // falta
+  { nom: "Galta de porc al vi negre", preu: 7.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" }, // falta
   { nom: "Fricandó amb bolets", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
   { nom: "Bacallà amb tomàquet", preu: 9.00, img: "img/Bacalla_amb_tomaquet.jpeg", categoria: "Plats Cuinats" },
   { nom: "Pop a la gallega", preu: 15.00, img: "img/pop.jpg", categoria: "Plats Cuinats" },
@@ -32,11 +32,11 @@ const PRODUCTES = [
   { nom: "Pa fet del dia", preu: 1.50, img: "img/pa.jpg", categoria: "Salses i Complements" },
   { nom: "Allioli", preu: 1.50, img: "img/alioli.jpeg", categoria: "Salses i Complements" },
   // Begudes
-  { nom: "Cava Marfil d'Alella", preu: 12.00, img: "img/cava.jpeg", categoria: "Begudes" },
-  { nom: "Vi negre Raventós d'Alella", preu: 12.00, img: "img/vi_negre.jpeg", categoria: "Begudes" },
-  { nom: "Vi blanc Raventós d'Alella", preu: 12.00, img: "img/vi_blanc.jpeg", categoria: "Begudes" },
-  { nom: "Vermut negre d'Alella", preu: 12.00, img: "img/vermut.jpeg", categoria: "Begudes" },
-  { nom: "Ampolla d'aigua (1L)", preu: 1.50, img: "img/font_dor.jpeg", categoria: "Begudes" }
+  { nom: "Vi negre Etiris GX d'Alella", preu: 15.00, img: "img/vi_vermell.jpg", categoria: "Begudes" },
+  { nom: "Vi blanc Etiris PB d'Alella", preu: 15.00, img: "img/vi_blanc.jpg", categoria: "Begudes" },
+  { nom: "Vermut", preu: 12.00, img: "img/vermut.jpeg", categoria: "Begudes" },
+  { nom: "Ampolla d'aigua (1L)", preu: 1.50, img: "img/font_dor.jpeg", categoria: "Begudes" },
+  { nom: "Refrescos", preu: 1.50, img: "img/refrescos.jpeg", categoria: "Begudes" }
 ];
 
 const CISTELL_KEY = 'canrostit_cistell';
