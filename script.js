@@ -175,7 +175,7 @@ btn.addEventListener('click', () => {
   const notes = document.getElementById('notes').value.trim();
 
   let total = 0;
-  let txt = '*NOVA COMANDA · Cal Rustit*\n\n';
+  let txt = '*NOVA COMANDA · Can Rostit*\n\n';
   PRODUCTES.forEach((p, i) => {
     if (cistell[i] > 0) {
       const sub = p.preu * cistell[i];
@@ -230,7 +230,7 @@ function inicialitzarModalSubscripcio() {
       alert("Si us plau, introdueix un número de telèfon.");
       return;
     }
-    const missatge = `Hola! Vull apuntar-me a les novetats de Cal Rustit. El meu número és ${telefon}`;
+    const missatge = `Hola! Vull apuntar-me a les novetats de Can Rostit. El meu número és ${telefon}`;
     const url = `https://wa.me/${NUM_TELEFON_RESTAURANT}?text=${encodeURIComponent(missatge)}`;
     window.open(url, "_blank");
     localStorage.setItem("subscripcio-mostrada", "true");
