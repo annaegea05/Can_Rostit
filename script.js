@@ -8,18 +8,18 @@ const PRODUCTES = [
   { nom: "Mig pollastre", preu: 8.00, img: "img/Mig_pollastre.jpeg", categoria: "A l'ast" },
 
   // Entrants i Acompanyaments
-  { nom: "Amanida de pasta amb pesto, tomàquet sec i mozzarella", preu: 7.00, img: "img/Pasta_salad.jpeg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Amanida de pasta amb pesto, tomàquet sec i mozzarella", preu: 7.00, img: "img/ensalada_pasta_pesto.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Ensaladilla russa", preu: 7.50, img: "img/ensaladilla.jpeg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Amanida de pebrot escalivat amb allada d'all i oli", preu: 7.50, img: "img/Esqueixada de bacalla.jpg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Amanida de pebrot escalivat amb allada d'all i oli", preu: 7.50, img: "img/Pimientos-asados-al-ajillo.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
 
   // Plats Cuinats
-  { nom: "Empedrat de bacallà amb olives negres i ceba vermella", preu: 7.00, img: "img/Bacalla_amb_tomaquet.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Conill en salsa de cacauet amb patates al forn", preu: 7.50, img: "img/Mig_pollastre.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Calamars farcits de mar i muntanya", preu: 9.00, img: "img/Calamars encebollats.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Rap a la marinera amb cloïsses", preu: 9.00, img: "img/Rap a la marinera amb cloïsses.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Mandonguilles en salsa de pebrots i pimentó fumat amb patates al forn", preu: 6.50, img: "img/Mandonguilles en salsa de pebrots i pimentó fumat amb patates al forn.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Fricandó amb bolets i patates al forn", preu: 8.50, img: "img/Fricando_amb_bolets.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Empedrat de bacallà amb olives negres i ceba vermella", preu: 7.00, img: "img/empedrat-foto-cerca.jpg", categoria: "Plats Cuinats" },
+  { nom: "Conill en salsa de cacauet amb patates al forn", preu: 7.50, img: "img/conill_almendras.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Calamars farcits de mar i muntanya", preu: 9.00, img: "img/calamares-mar-montaña.jpg", categoria: "Plats Cuinats" },
+  { nom: "Rap a la marinera amb cloïsses", preu: 9.00, img: "img/rap_a_la_marinera_amb_cloisses.jpg", categoria: "Plats Cuinats" },
+  { nom: "Mandonguilles en salsa de pebrots i pimentó fumat amb patates al forn", preu: 6.50, img: "img/mandonguilles.jpg", categoria: "Plats Cuinats" },
+  { nom: "Fricandó amb bolets i patates al forn", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
   
   // Croquetes i patates
   { nom: "1 Patata al caliu", preu: 1.00, img: "img/caliu.jpeg", categoria: "Croquetes i Patates" },
