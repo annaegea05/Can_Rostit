@@ -29,7 +29,7 @@ const PRODUCTES = [
 
   // Arrossos i Pasta
   { nom: "Macarrons a la catalana", preu: 7.00, img: "img/Macarrons a la catalana.jpeg", categoria: "Arrossos i Pasta" },
-  { nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/arroz_secreto.jpeg", categoria: "Arrossos i Pasta" }, // falta
+  { nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/paella_gambas.jpeg", categoria: "Arrossos i Pasta" }, // falta
   { nom: "Canelons de Can Rostit (3 ud)", preu: 6.50, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
   { nom: "Canelons de Can Rostit (6 ud)", preu: 12.00, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
 
