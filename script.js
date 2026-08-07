@@ -10,8 +10,8 @@ const PRODUCTES = [
   // Entrants i Acompanyaments
   { nom: "Amanida de pasta amb pesto, tomàquet sec i mozzarella", preu: 7.00, img: "img/ensalada_pasta_pesto.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Ensaladilla russa", preu: 7.50, img: "img/ensaladilla.jpeg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Amanida de pebrot escalivat amb allada d'all i oli", preu: 7.50, img: "img/Pimientos-asados-al-ajillo.jpeg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
+  //{ nom: "Amanida de pebrot escalivat amb allada d'all i oli", preu: 7.50, img: "img/Pimientos-asados-al-ajillo.jpeg", categoria: "Entrants i Acompanyaments" },
+  //{ nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
 
   // Plats Cuinats
   { nom: "Empedrat de bacallà amb olives negres i ceba vermella", preu: 7.00, img: "img/empedrat-foto-cerca.jpg", categoria: "Plats Cuinats" },
