@@ -18,8 +18,8 @@ const PRODUCTES = [
   { nom: "Conill en salsa de cacauet amb patates al forn", preu: 7.50, img: "img/conill_almendras.jpeg", categoria: "Plats Cuinats" },
   { nom: "Calamars farcits de mar i muntanya", preu: 9.00, img: "img/calamares-mar-montaña.jpg", categoria: "Plats Cuinats" },
   { nom: "Rap a la marinera amb cloïsses", preu: 9.00, img: "img/rap_a_la_marinera_amb_cloisses.jpg", categoria: "Plats Cuinats" },
-  { nom: "Mandonguilles en salsa de pebrots i pimentó fumat amb patates al forn", preu: 6.50, img: "img/mandonguilles.jpg", categoria: "Plats Cuinats" },
-  { nom: "Fricandó amb bolets i patates al forn", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Mandonguilles en salsa de pebrots i pimentó fumat", preu: 6.50, img: "img/mandonguilles.jpg", categoria: "Plats Cuinats" },
+  { nom: "Fricandó amb bolets", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
   
   // Croquetes i patates
   { nom: "1 Patata al caliu", preu: 1.00, img: "img/caliu.jpeg", categoria: "Croquetes i Patates" },
@@ -29,7 +29,7 @@ const PRODUCTES = [
 
   // Arrossos i Pasta
   { nom: "Macarrons a la catalana", preu: 7.00, img: "img/Macarrons a la catalana.jpeg", categoria: "Arrossos i Pasta" },
-  { nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/paella_gambas.jpeg", categoria: "Arrossos i Pasta" }, // falta
+  //{ nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/paella_gambas.jpeg", categoria: "Arrossos i Pasta" }, // falta
   { nom: "Canelons de Can Rostit (3 ud)", preu: 6.50, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
   { nom: "Canelons de Can Rostit (6 ud)", preu: 12.00, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
 
