@@ -16,7 +16,7 @@ const PRODUCTES = [
   // Plats Cuinats
   { nom: "Empedrat de bacallà amb olives negres i ceba vermella", preu: 7.00, img: "img/empedrat-foto-cerca.jpg", categoria: "Plats Cuinats" },
   { nom: "Conill en salsa de cacauet amb patates al forn", preu: 7.50, img: "img/conill_almendras.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Calamars farcits de mar i muntanya", preu: 9.00, img: "img/calamares-mar-montaña.jpg", categoria: "Plats Cuinats" },
+  { nom: "Calamars farcits de mar i muntanya", preu: 6.50, img: "img/calamares-mar-montaña.jpg", categoria: "Plats Cuinats" },
   { nom: "Rap a la marinera amb cloïsses", preu: 9.00, img: "img/rap_a_la_marinera_amb_cloisses.jpg", categoria: "Plats Cuinats" },
   { nom: "Mandonguilles en salsa de pebrots i pimentó fumat", preu: 6.50, img: "img/mandonguilles.jpg", categoria: "Plats Cuinats" },
   { nom: "Fricandó amb bolets", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
