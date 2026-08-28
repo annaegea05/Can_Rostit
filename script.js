@@ -15,6 +15,7 @@ const PRODUCTES = [
   { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Pebrots del piquillo farcits de brandada de bacallà (3 ud)", preu: 6.50, img: "img/Pebrots_farcits.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Arròs de les tres delícies", preu: 7.00, img: "img/Arròs_de_les_tres_delícies.jpeg", categoria: "Plats Cuinats" },
 
   // Plats Cuinats
   { nom: "Galta de porc al vi negre", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
@@ -31,7 +32,7 @@ const PRODUCTES = [
   { nom: "1 Patata al caliu", preu: 0.50, img: "img/caliu.jpeg", categoria: "Croquetes i Patates" },
   { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes i Patates" },
   { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/Croqueta de pernil iberic.jpeg", categoria: "Croquetes i Patates" },
-  { nom: "1 Croqueta de gamba", preu: 2.00, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes i Patates" }, // falta
+  //{ nom: "1 Croqueta de gamba", preu: 2.00, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes i Patates" }, // falta
 
   // Arrossos i Pasta
   //{ nom: "Macarrons a la bolonyesa", preu: 7.00, img: "img/Macarrons_bolonyesa.jpg", categoria: "Arrossos i Pasta" },
