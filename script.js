@@ -8,36 +8,38 @@ const PRODUCTES = [
   { nom: "Mig pollastre", preu: 8.00, img: "img/Mig_pollastre.jpeg", categoria: "A l'ast" },
 
   // Entrants i Acompanyaments
+  { nom: "Empanada de tonyina amb tomàquet", preu: 4.50, img: "img/empanada_tonyina.jpeg", categoria: "Entrants i Acompanyaments" },
   //{ nom: "Amanida de pasta", preu: 7.00, img: "img/ensalada_pasta_pesto.jpeg", categoria: "Entrants i Acompanyaments" },
   //{ nom: "Amanida de cigrons amb formatge feta" , preu: 7.00, img: "img/ensalada_cigrons.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Ensaladilla russa", preu: 7.50, img: "img/ensaladilla.jpeg", categoria: "Entrants i Acompanyaments" },
   //{ nom: "Amanida de pebrot escalivat amb allada d'all i oli", preu: 7.50, img: "img/Pimientos-asados-al-ajillo.jpeg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Gaspatxo tradicional", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
-  { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Crema freda de tomàquet", preu: 4.50, img: "img/Gazpacho.jpg", categoria: "Entrants i Acompanyaments" },
+  //{ nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
   { nom: "Pebrots del piquillo farcits de brandada de bacallà (3 ud)", preu: 6.50, img: "img/Pebrots_farcits.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Arròs de les tres delícies", preu: 7.00, img: "img/Arròs_de_les_tres_delícies.jpeg", categoria: "Plats Cuinats" },
+  //{ nom: "Arròs de les tres delícies", preu: 7.00, img: "img/Arròs_de_les_tres_delícies.jpeg", categoria: "Plats Cuinats" },
 
   // Plats Cuinats
-  { nom: "Galta de porc al vi negre", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
+  //{ nom: "Galta de porc al vi negre", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
   //{ nom: "Empedrat de bacallà amb olives negres i ceba vermella", preu: 7.00, img: "img/empedrat-foto-cerca.jpg", categoria: "Plats Cuinats" },
   //{ nom: "Conill en salsa de cacauet amb patates al forn", preu: 7.50, img: "img/conill_almendras.jpeg", categoria: "Plats Cuinats" },
   //{ nom: "Calamars farcits de mar i muntanya", preu: 6.50, img: "img/calamares-mar-montaña.jpg", categoria: "Plats Cuinats" },
   //{ nom: "Rap a la marinera amb cloïsses", preu: 9.00, img: "img/rap_a_la_marinera_amb_cloisses.jpg", categoria: "Plats Cuinats" },
   //{ nom: "Mandonguilles en salsa de pebrots i pimentó fumat", preu: 6.50, img: "img/mandonguilles.jpg", categoria: "Plats Cuinats" },
-  { nom: "Tonyina en escabetx amb tomàquet", preu: 10.00, img: "img/tonyina_escabetx.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Nyoquis a la bolonyesa", preu: 7.00, img: "img/nyoquis_bolonyesa.jpeg", categoria: "Plats Cuinats" },
+  //{ nom: "Tonyina en escabetx amb tomàquet", preu: 10.00, img: "img/tonyina_escabetx.jpeg", categoria: "Plats Cuinats" },
+  //{ nom: "Nyoquis a la bolonyesa", preu: 7.00, img: "img/nyoquis_bolonyesa.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Conill amb cargols", preu: 8.50, img: "img/conill_amb_cargols.jpeg.webp", categoria: "Plats Cuinats"},
   { nom: "Fricandó amb bolets", preu: 8.50, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats Cuinats" },
   
   // Croquetes i patates
   { nom: "1 Patata al caliu", preu: 0.50, img: "img/caliu.jpeg", categoria: "Croquetes i Patates" },
   { nom: "1 Croqueta de pollastre rostit", preu: 1.50, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes i Patates" },
   { nom: "1 Croqueta de pernil ibèric", preu: 2.00, img: "img/Croqueta de pernil iberic.jpeg", categoria: "Croquetes i Patates" },
-  //{ nom: "1 Croqueta de gamba", preu: 2.00, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes i Patates" }, // falta
+  //{ nom: "1 Croqueta de gamba", preu: 2.00, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes i Patates" }, 
 
   // Arrossos i Pasta
-  //{ nom: "Macarrons a la bolonyesa", preu: 7.00, img: "img/Macarrons_bolonyesa.jpg", categoria: "Arrossos i Pasta" },
+  { nom: "Macarrons a la bolonyesa", preu: 7.00, img: "img/Macarrons_bolonyesa.jpg", categoria: "Arrossos i Pasta" },
   //{ nom: "Macarrons a la catalana", preu: 7.00, img: "img/Macarrons a la catalana.jpeg", categoria: "Arrossos i Pasta" },
-  //{ nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/paella_gambas.jpeg", categoria: "Arrossos i Pasta" }, // falta
+  //{ nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/paella_gambas.jpeg", categoria: "Arrossos i Pasta" },
   { nom: "Canelons de Can Rostit (3 ud)", preu: 6.50, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
   { nom: "Canelons de Can Rostit (6 ud)", preu: 12.00, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
 
@@ -48,7 +50,7 @@ const PRODUCTES = [
   // Begudes
   { nom: "Vi negre Etiris GX d'Alella", preu: 15.00, img: "img/vi_vermell.jpg", categoria: "Begudes" },
   { nom: "Vi blanc Etiris PB d'Alella", preu: 15.00, img: "img/vi_blanc.jpg", categoria: "Begudes" },
-  { nom: "Vermut", preu: 12.00, img: "img/vermut.jpeg", categoria: "Begudes" },
+  { nom: "Cava", preu: 12.00, img: "img/vermut.jpeg", categoria: "Begudes" },
   { nom: "Ampolla d'aigua (1L)", preu: 1.50, img: "img/font_dor.jpeg", categoria: "Begudes" },
   { nom: "Refrescos", preu: 1.50, img: "img/refrescos.jpeg", categoria: "Begudes" }
 ];
