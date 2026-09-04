@@ -50,7 +50,7 @@ const PRODUCTES = [
   // Begudes
   { nom: "Vi negre Etiris GX d'Alella", preu: 15.00, img: "img/vi_vermell.jpg", categoria: "Begudes" },
   { nom: "Vi blanc Etiris PB d'Alella", preu: 15.00, img: "img/vi_blanc.jpg", categoria: "Begudes" },
-  { nom: "Cava", preu: 12.00, img: "img/vermut.jpeg", categoria: "Begudes" },
+  { nom: "Cava", preu: 6.00, img: "img/cava.jpeg", categoria: "Begudes" },
   { nom: "Ampolla d'aigua (1L)", preu: 1.50, img: "img/font_dor.jpeg", categoria: "Begudes" },
   { nom: "Refrescos", preu: 1.50, img: "img/refrescos.jpeg", categoria: "Begudes" }
 ];
