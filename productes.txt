@@ -33,3 +33,10 @@
   { nom: "Refrescos", preu: 1.50, img: "img/refrescos.jpeg", categoria: "Begudes" }
 ];
 
+
+
+Crema de carbaso
+ { nom: "Codillo en salsa", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Ternera a la jardinera", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Tinval de paatat i pulpo", preu: 15.00, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
+

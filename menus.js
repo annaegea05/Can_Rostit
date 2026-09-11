@@ -1,9 +1,9 @@
 const MENUS_KEY = 'canrostit_menus_cistell';
 
 const MENUS = [
-  { nom: "Menú per a 4", preu: 40.00, img: "img/menu4.jpg", descripcio: "Pollastre a l'ast + patates al caliu + 6 canelons + 6 croquetes o ensaladilla gran + allioli", categoria: "Menús" },
-  { nom: "Menú per a 2", preu: 25.00, img: "img/menu2.jpg", descripcio: "Pollastre a l'ast + patates al caliu + 4 croquetes o ensaladilla + ampolla de cava + allioli", categoria: "Menús" },
-  { nom: "Menú per a 2", preu: 21.50, img: "img/menu2.jpg", descripcio: "Mig pollastre a l'ast + patates al caliu + 4 croquetes o ensaladilla + ampolla de cava + allioli", categoria: "Menús" }
+  { nom: "Menú per a 4", preu: 40.00, img: "img/menu4.jpg", descripcio: "Pollastre a l'ast + 4 patates al caliu + 6 canelons + 6 croquetes o ensaladilla gran + allioli", categoria: "Menús" },
+  { nom: "Menú per a 2", preu: 25.00, img: "img/menu2.jpg", descripcio: "Pollastre a l'ast + 2 patates al caliu + 4 croquetes o ensaladilla + ampolla de cava + allioli", categoria: "Menús" },
+  { nom: "Menú per a 2", preu: 21.50, img: "img/menu2.jpg", descripcio: "Mig pollastre a l'ast + 2 patates al caliu + 4 croquetes o ensaladilla + ampolla de cava + allioli", categoria: "Menús" }
 ];
 
 const cistell = {};
