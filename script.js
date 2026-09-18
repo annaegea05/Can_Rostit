@@ -31,8 +31,8 @@ const PRODUCTES = [
   { nom: "Macarrons a la bolonyesa", preu: 7.00, img: "img/Macarrons_bolonyesa.jpg", categoria: "Arrossos i Pasta" },
   //{ nom: "Macarrons a la catalana", preu: 7.00, img: "img/Macarrons a la catalana.jpeg", categoria: "Arrossos i Pasta" },
   //{ nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/paella_gambas.jpeg", categoria: "Arrossos i Pasta" },
-  { nom: "Canelons de Can Rostit (3 ud)", preu: 6.50, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
-  { nom: "Canelons de Can Rostit (6 ud)", preu: 12.00, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
+  //{ nom: "Canelons de Can Rostit (3 ud)", preu: 6.50, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
+  //{ nom: "Canelons de Can Rostit (6 ud)", preu: 12.00, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
 
   // Salses i Complements
   { nom: "Pa fet del dia", preu: 1.20, img: "img/pa.jpg", categoria: "Salses i Complements" },
