@@ -18,7 +18,7 @@ const PRODUCTES = [
   // Plats Cuinats
   { nom: "Vedella en salsa de vi negre", preu: 8.50, img: "img/vadella.jpeg", categoria: "Plats Cuinats" },
   { nom: "Conill a l'all ", preu: 8.50, img: "img/conill.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Lluç a la marinera", preu: 9.00, img: "img/Lluç a la marinera.webp", categoria: "Plats Cuinats" },
+  { nom: "Lluç a la marinera", preu: 10.00, img: "img/Lluç a la marinera.webp", categoria: "Plats Cuinats" },
 
   // Croquetes i patates
   { nom: "1 Patata al caliu", preu: 0.50, img: "img/caliu.jpeg", categoria: "Croquetes i Patates" },
