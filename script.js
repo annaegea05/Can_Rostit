@@ -17,7 +17,7 @@ const PRODUCTES = [
   { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
 
   // Plats Cuinats
-  { nom: "Bacallà amb tomaquet", preu: 9.00, img: "img/Bacalla_amb_tomaquet.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Bacallà amb tomaquet i all i oli", preu: 6.00, img: "img/Bacalla_amb_tomaquet.jpeg", categoria: "Plats Cuinats" },
   { nom: "Galta de porc al vi negre", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
   //{ nom: "Vedella en salsa de vi negre", preu: 8.50, img: "img/vadella.jpeg", categoria: "Plats Cuinats" },
   //{ nom: "Conill a l'all ", preu: 8.50, img: "img/conill.jpeg", categoria: "Plats Cuinats" },
