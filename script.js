@@ -15,7 +15,7 @@ const PRODUCTES = [
 
   // Plats Cuinats
   { nom: "Sopa de galets", preu: 6.00, img: "img/sopa.jpeg", categoria: "Plats de la setmana" },
-  { nom: "Fricandó de vedella", preu: 9.00, img: "img/fricando.jpeg", categoria: "Plats de la setmana" },
+  { nom: "Fricandó de vedella", preu: 9.00, img: "img/Fricandó amb bolets.jpeg", categoria: "Plats de la setmana" },
   //{ nom: "Galta de porc al vi negre", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
   { nom: "Cap i pota amb cigrons", preu: 8.00, img: "img/cap_i_pota.jpg", categoria: "Plats Cuinats" },
  // { nom: "Sepia amb patates i pesols", preu: 10.00, img: "img/sepia_patat_pesols.webp", categoria: "Plats Cuinats" },
