@@ -8,22 +8,17 @@ const PRODUCTES = [
   { nom: "Mig pollastre", preu: 8.00, img: "img/Mig_pollastre.jpeg", categoria: "A l'ast" },
 
   // Entrants i Acompanyaments
-  //{ nom: "Empanada de bonito (1 ud)", preu: 2.00, img: "img/empanadilla.png", categoria: "Entrants i Acompanyaments" },
-  //{ nom: "Pop a la gallega", preu: 15.00, img: "img/pop.jpg", categoria: "Plats Cuinats" },
   { nom: "Ensaladilla de russa", preu: 7.50, img: "img/ensaladilla.jpeg", categoria: "Entrants i Acompanyaments" },
-  //{ nom: "Esberginia (1ud)", preu: 3.00, img: "img/berenjenas-rellenas-de-verduras.jpg", categoria: "Entrants i Acompanyaments" },
-  //{ nom: "Amanida de pebrot escalivat amb allada d'all i oli", preu: 7.50, img: "img/Pimientos-asados-al-ajillo.jpeg", categoria: "Entrants i Acompanyaments" },
-  //{ nom: "Vichyssoise", preu: 4.50, img: "img/Vichyssoise.jpg", categoria: "Entrants i Acompanyaments" },
   { nom: "Escalivada", preu: 7.50, img: "img/Escalivada.jpeg", categoria: "Entrants i Acompanyaments" },
+  { nom: "Cargols amb salsa", preu: 8.95, img: "img/cargols.jpeg", categoria: "Plats de la setmana" },
+  { nom: "Sardines en escabetx (5 u.)", preu: 6.00, img: "img/sardian.jpeg", categoria: "Plats de la setmana" },
 
   // Plats Cuinats
-  //{ nom: "Bacallà amb tomaquet i all i oli", preu: 6.00, img: "img/Bacalla_amb_tomaquet.jpeg", categoria: "Plats Cuinats" },
-  { nom: "Galta de porc al vi negre", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
+  { nom: "Sopa de galets", preu: 6.00, img: "img/sopa.jpeg", categoria: "Plats de la setmana" },
+  { nom: "Fricandó de vedella", preu: 9.00, img: "img/fricando.jpeg", categoria: "Plats de la setmana" },
+  //{ nom: "Galta de porc al vi negre", preu: 8.50, img: "img/galta.jpeg", categoria: "Plats Cuinats" },
   { nom: "Cap i pota amb cigrons", preu: 8.00, img: "img/cap_i_pota.jpg", categoria: "Plats Cuinats" },
-  { nom: "Sepia amb patates i pesols", preu: 10.00, img: "img/sepia_patat_pesols.webp", categoria: "Plats Cuinats" },
-  //{ nom: "Vedella en salsa de vi negre", preu: 8.50, img: "img/vadella.jpeg", categoria: "Plats Cuinats" },
-  //{ nom: "Conill a l'all ", preu: 8.50, img: "img/conill.jpeg", categoria: "Plats Cuinats" },
-  //{ nom: "Lluç a la marinera", preu: 10.00, img: "img/Lluç a la marinera.webp", categoria: "Plats Cuinats" },
+ // { nom: "Sepia amb patates i pesols", preu: 10.00, img: "img/sepia_patat_pesols.webp", categoria: "Plats Cuinats" },
 
   // Croquetes i patates
   { nom: "1 Patata al caliu", preu: 0.50, img: "img/caliu.jpeg", categoria: "Croquetes i Patates" },
@@ -32,9 +27,9 @@ const PRODUCTES = [
   //{ nom: "1 Croqueta de gamba", preu: 2.00, img: "img/Croqueta de pollastre rostit.jpeg", categoria: "Croquetes i Patates" },
 
   // Arrossos i Pasta
-  {nom: "Fideuà de sepia i escamarlans (la ració)", preu: 10.00, img: "img/fideua.jpg", categoria: "Arrossos i Pasta"},
+  //{nom: "Fideuà de sepia i escamarlans (la ració)", preu: 10.00, img: "img/fideua.jpg", categoria: "Arrossos i Pasta"},
   //{ nom: "Macarrons a la bolonyesa", preu: 7.00, img: "img/Macarrons_bolonyesa.jpg", categoria: "Arrossos i Pasta" },
-  //{ nom: "Espaguetis a la bolonyesa " , preu: 7.00, img: "img/ESPAGUETTI.jpg", categoria: "Arrossos i Pasta" },
+  { nom: "Espaguetis a la bolonyesa " , preu: 7.00, img: "img/ESPAGUETTI.jpg", categoria: "Arrossos i Pasta" },
   //{ nom: "Macarrons al pesto", preu: 7.00, img: "img/macarrones_al_pesto.jpg", categoria: "Arrossos i Pasta" },
   //{ nom: "Arròs de calamars i gambes (la ració)", preu: 15.00, img: "img/paella_gambas.jpeg", categoria: "Arrossos i Pasta" },
   { nom: "Canelons de Can Rostit (3 ud)", preu: 6.50, img: "img/canelones.jpeg", categoria: "Arrossos i Pasta" },
@@ -43,6 +38,7 @@ const PRODUCTES = [
   // Salses i Complements
   { nom: "Pa fet del dia", preu: 1.20, img: "img/pa.jpg", categoria: "Salses i Complements" },
   { nom: "Allioli", preu: 1.50, img: "img/alioli.jpeg", categoria: "Salses i Complements" },
+  { nom: "Pastís de formatge de Can Rostit", preu: 12.00, img: "img/chesecake.jpeg", categoria: "Postres" },
 
   // Begudes
   { nom: "Vi negre Etiris GX d'Alella", preu: 15.00, img: "img/vi_vermell.jpg", categoria: "Begudes" },
